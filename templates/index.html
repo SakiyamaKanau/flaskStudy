@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Dummy Table Data</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Name Kana</th>
+            <th>Age</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Blood Type</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Mobile Phone Number</th>
+            <th>Postal Code</th>
+            <th>Address</th>
+            <th>Company Name</th>
+            <th>Credit Card Number</th>
+            <th>Card Expiry</th>
+            <th>My Number</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            {% for col in row %}
+            <td>{{ col }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+  <!-- ボタンを押すと、/nextpageに飛ぶ -->
+  <form action="/upload" method="get">
+    <input type="submit" value='next!'>
+  </form>
+</body>
+
+  
+</html>
