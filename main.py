@@ -10,7 +10,6 @@ app = Flask(__name__)
 app.register_blueprint(upload_blueprint, url_prefix='/upload')
 
 
-
 def connect_to_database():
     """PostgreSQLデータベースに接続"""
     return psycopg2.connect(
@@ -34,4 +33,3 @@ def index():
 
 #run
 app.run(host='0.0.0.0', port=81)
-
