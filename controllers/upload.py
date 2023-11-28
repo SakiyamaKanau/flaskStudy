@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template, request
 from datetime import datetime
+from models.database import connect_to_database
+
 
 upload_blueprint = Blueprint('upload', __name__)
 
